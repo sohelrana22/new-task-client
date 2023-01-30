@@ -56,7 +56,7 @@ const Bill = () => {
   const [id, setId] = useState("");
   const GetEmployeeData = () => {
     //here we will get all employee data
-    const url = "http://localhost:5000/api/billing-list";
+    const url = "https://power-hack-ygrg.onrender.com/api/billing-list";
     axios
       .get(url)
       .then((response) => {
@@ -75,7 +75,7 @@ const Bill = () => {
       });
   };
   const handleSubmite = () => {
-    const url = "http://localhost:5000/api/add-billing";
+    const url = "https://power-hack-ygrg.onrender.com/api/add-billing";
     const Credentials = { name, email, number, amount };
     axios
       .post(url, Credentials)
@@ -94,7 +94,7 @@ const Bill = () => {
       });
   };
   const handleEdit = () => {
-    const url = `http://localhost:5000/api/update-billing/${id}`;
+    const url = `https://power-hack-ygrg.onrender.com/api/update-billing/${id}`;
     const Credentials = { name, email, number, amount };
     axios
       .put(url, Credentials)
@@ -114,7 +114,7 @@ const Bill = () => {
   };
   //handle Delete Function
   const handleDelete = () => {
-    const url = `http://localhost:5000/api/delete-billing/${id}`;
+    const url = `https://power-hack-ygrg.onrender.com/api/delete-billing/${id}`;
     axios
       .delete(url)
       .then((response) => {
